@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown menu</title>
+</head>
+<body>
+    <div class="body">
+        <nav class="nav">
+            <ul class="great-grand-parent">
+                <li>item-1</li>
+                <li>item-2</li>
+                <li>item-3</li>
+                <li>item-4</li>
+                <li>item-5</li>
+                <ul class="grand-parent">
+                    <li>list-1</li>
+                    <li>list-2</li>
+                    <li>list-3</li>
+                </ul>
+                <ul class="parent">
+                    <li class="child">item-1</li>
+                    <li class="child">item-2</li>
+                </ul>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Javascript cdn is here -->
+    <script src="../cdn.js"></script>
+
+    <script>
+        // javascript CSS
+        $('*').css({
+            margin : '0',
+            padding : '0',
+            boxSizing: 'border-box'
+        })
+        $('.body').css({
+            width : '100%',
+            height : '100vh',
+            backgroundColor : 'pink',
+        })
+        $('nav').css({
+            backgroundColor : 'purple',
+            color : 'yellow',
+            fontSize : '30px',
+            padding : '20px'
+        })
+        $('ul').css({
+            listStyleType : 'none'
+        })
+        $('li').css({
+            cursor : 'pointer',
+            padding : '10px'
+        })
+        $('.great-grand-parent').css({
+            display : 'flex',
+            justifyContent : 'center',
+            gap : '80px',
+            position : 'relative'
+        })
+        $('.grand-parent').css({
+            display : 'none',
+            position : 'absolute',
+            backgroundColor : 'crimson',
+            color : 'aliceblue',
+            border : '3px ridge maroon',
+            width : '250px',
+            fontSize : '30px',
+            top : '73px',
+            right : '350px',
+            textAlign : 'center',
+            padding : '30px',
+        })
+        $('.parent').css({
+            display : 'none',
+            position : 'absolute',
+            backgroundColor : 'yellow',
+            color : 'blue',
+            width : '200px',
+            fontSize : '30px',
+            opacity : '0.5',
+            top : '200px',
+            right : '150px',
+            textAlign : 'center',
+            border : '3px ridge orange',
+            padding : '30px'
+        })
+
+        // Jquery
+        $(document).ready(function() {
+
+            // $('nav ul li').click(function() {
+            $('.great-grand-parent li:nth-child(4)').click(function() {
+                $('.grand-parent').fadeToggle(200)
+            })
+            $('.grand-parent li:nth-child(3)').click(function() {
+                $('.parent').fadeToggle(200)
+            })
+
+        })
+
+
+    </script>
+</body>
+</html>

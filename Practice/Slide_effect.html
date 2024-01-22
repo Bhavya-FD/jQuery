@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            align-items: center;
+            appearance: none;
+            background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+            border: 0;
+            border-radius: 6px;
+            box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            font-family: "JetBrains Mono",monospace;
+            height: 48px;
+            justify-content: center;
+            line-height: 1;
+            padding-left: 26px;
+            padding-right: 26px;
+            text-align: left;
+            text-decoration: none;
+            transition: box-shadow .15s,transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow,transform;
+            font-size: 18px;
+        }
+
+        button:focus {
+            box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+        }
+
+        button:hover {
+            box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            box-shadow: #3c4fe0 0 3px 7px inset;
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Slide Effect in jQuery</h1>
+    <div class="slide">
+    <button id="btnslideup">Slide Up</button>
+    <button id="btnslidedown">Slide Down</button>
+    <button id="btnslidetoggle">Slide Toggle</button>
+    </div>
+    <div class="box">Slide Effect in jQuery</div>
+
+    <!-- jQuery CDN -->
+    <script src="../cdn.js"></script>
+    
+    <script>
+        $('*').css({
+            margin: '0',
+            padding:'0',
+            boxSizing: 'border-box'
+        })
+        $('body').css({
+            backgroundColor : 'crimson',
+            textAlign : 'center',
+            color : 'Aliceblue',
+            fontSize : '30px'
+        })
+        $('.box').css({
+            height : '300px',
+            width : '400px',
+            backgroundColor : 'brown',
+            color : 'orange',
+            margin : '50px auto',
+            padding : '20px',
+            border : '5px solid blue'
+        })
+
+    $(document).ready(function () {
+
+        // slideup function
+        $('#btnslideup').click(function () {
+            $('.box').slideUp(2000)
+        })
+
+        // slidedown function
+        $('#btnslidedown').click(function () {
+            $('.box').slideDown(2000)
+        })
+
+        // slidetoggle function
+        $('#btnslidetoggle').click(function () {
+            $('.box').slideToggle(2000)
+        })
+
+                    
+    })
+    </script>
+</body>
+</html>
+
+

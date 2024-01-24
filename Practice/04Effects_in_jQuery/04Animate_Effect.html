@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Effect in jQuery</title>
+    <style>
+        body{
+            background-color: rgb(167, 245, 249);
+            text-align: center;
+        }
+        h1{
+            background: rgb(0, 59, 0);
+            font-size: 50px;
+            color:rgb(248, 177, 177);
+            display: inline;
+            padding: 20px;
+            margin-top: 10px;
+        }
+        button{
+            font-size: 20px;
+            background: brown;
+            margin: 50px;
+            padding: 15px 30px ;
+            color: rgb(241, 239, 239);
+            border-radius: 10px;
+        }
+        .box{
+            height: 300px;
+            width: 25%;
+            border: 5px ridge rgb(145, 2, 26);
+            background-color:   rgb(173, 4, 32);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Animate Effect in jQuery</h1><br>
+    <button class="btnAnimate">Animate</button>
+    <div class="box"></div>
+    
+    <script src="../../cdn.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.btnAnimate').click(function () {  
+                // .animate only accepts numeric values
+                $('.box').animate({borderRadius : '30px',marginLeft: '500px',marginTop: '100px'} ,2500)
+            })
+        })
+    </script>
+</body>
+</html>

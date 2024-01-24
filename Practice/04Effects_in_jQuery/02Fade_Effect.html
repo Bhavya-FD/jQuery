@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Effect in jQuery</title>
+    <style>
+        body{
+            background-color: tan;
+            text-align: center;
+        }
+        h1{
+            background: palegreen;
+            font-size: 50px;
+            color:brown;
+            display: inline;
+            padding: 20px;
+            margin-top: 10px;
+        }
+        button{
+            font-size: 20px;
+            background: brown;
+            margin: 50px;
+            padding: 15px 30px ;
+            color: rgb(241, 239, 239);
+            border-radius: 10px;
+        }
+        .box{
+            height: 300px;
+            width: 25%;
+            margin: auto;
+            border: 5px ridge rgb(145, 2, 26);
+            background-color:   rgb(173, 4, 32);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Fade Effect in jQuery</h1><br>
+    <button class="btnfadeIn">FadeIn</button>
+    <button class="btnfadeOut">FadeOut</button>
+    <button class="btnfadeToggle">FadeToggle</button>
+    <button class="btnfadeTo">FadeTo</button>
+    <div class="box"></div>
+    
+    <script src="../../cdn.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.btnfadeIn').click(function () {
+                $('.box').fadeIn(1000);
+                // alert('box is Hidden')
+            })
+
+            $('.btnfadeOut').click(function () {
+                $('.box').fadeOut(1000);
+            })
+
+            $('.btnfadeToggle').click(function () {
+                $('.box').fadeToggle(1000);
+            })
+
+            $('.btnfadeTo').click(function () {
+                $('.box').fadeTo(1000,0.5);    //here 1000 is time in miliseconds and 0.5 is to Opacity
+            })
+        })
+    </script>
+</body>
+</html>

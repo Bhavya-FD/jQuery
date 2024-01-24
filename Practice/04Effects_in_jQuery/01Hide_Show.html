@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Show Effect in jQuery</title>
+    <style>
+        body{
+            background-color: tan;
+            text-align: center;
+        }
+        h1{
+            background: purple;
+            font-size: 50px;
+            color: aliceblue;
+            display: inline;
+            padding: 20px;
+            margin-top: 10px;
+        }
+        button{
+            font-size: 20px;
+            background: pink;
+            margin: 50px;
+            padding: 15px 30px ;
+            color: darkgreen;
+            border-radius: 10px;
+        }
+        .box{
+            height: 300px;
+            width: 25%;
+            margin: auto;
+            border: 5px ridge brown;
+            background-color: brown;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Hide Show Effect in jQuery</h1><br>
+    <button class="btnHide">Hide</button>
+    <button class="btnShow">Show</button>
+    <button class="btnToggle">Toggle</button>
+    <div class="box"></div>
+    
+    <script src="../../cdn.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.btnHide').click(function () {
+                $('.box').hide();
+                // alert('box is Hidden')
+            })
+
+            $('.btnShow').click(function () {
+                $('.box').show();
+            })
+
+            $('.btnToggle').click(function () {
+                $('.box').toggle();
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS in jQuery</title>
+</head>
+<body>
+    <h1>CSS in jQuery</h1>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis optio aperiam maiores?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis optio aperiam maiores?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis optio aperiam maiores?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis optio aperiam maiores?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis optio aperiam maiores?</p>
+
+    <!-- jQuery cdn -->
+    <script src="../cdn.js"></script>
+    <script>
+        // There are 3 Methods to apply CSS in jQuery
+
+        // Method1
+        // we can apply single CSS property
+        $('body').css('backgroundColor','crimson')
+    
+        // method2
+        $('body').css({'color':'blue','fontSize':'20px'});
+        $('p').css({'backgroundColor':'white' , 'display':'inline-block'})
+
+        // method3
+        $('h1').css({
+            backgroundColor : 'tan',
+            textAlign : 'center',
+            fontSize : '50px',
+            color : 'purple'
+        })
+    </script>
+</body>
+</html>

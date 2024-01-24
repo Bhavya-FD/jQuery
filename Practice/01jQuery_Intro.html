@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Introduction</title>
+    <style>
+        button{
+            background: plum;
+            color: rgb(133, 24, 24);
+            font-size: 17px;
+            font-weight: 600;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Introduction</h1>
+
+    <button>Click here to Show Alert</button>
+
+    <!-- jQuery cdn is here -->
+    <!-- we have to attach a cdn file to work with jQuery. we can either download it or give a link. -->
+    <script src="../cdn.js"></script>
+    <!-- we have a jQuery linke here -->
+     <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+    </script> -->
+
+    <script>
+    // get Document ready for script
+
+        //  $(document).ready(function () {
+        //      Your code here.
+        //   });
+
+    // Syntax
+        // $(document).ready(function () {
+        //     $(Selector).action(function () {
+        //do something
+        //     });
+       // });
+        
+
+    //    here we are running a click function using jQuery
+       $(document).ready(function () {
+            $('button').click(function () {
+                alert('Namaste Bharat!');
+            });
+       });
+
+    </script>
+</body>
+</html>

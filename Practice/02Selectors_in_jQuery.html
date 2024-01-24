@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in jQuery</title>
+    <style>
+        button{
+            background: plum;
+            color: rgb(133, 24, 24);
+            font-size: 17px;
+            font-weight: 600;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selectors in jQuery</h1>
+    <button class="universal">*</button>
+    <button class="btnclass">Class Selector</button>
+    <button id="btnId">Id Selector</button>
+
+    <!-- jQuery CDN -->
+    <script src="../cdn.js"></script>
+
+    <script>
+        // we can Manipulate CSS using Selectors in jQuery.
+        $(document).ready(function () {
+            // Universal Selector
+            $('.universal').click(function () {
+                $('*').css({backgroundColor : 'tan'})
+                // alert('Universal Selector is called')
+            })
+
+            // Element Selector
+            $('h1').click(function () {
+                alert('Element Selector is called')
+            })
+
+            // Class Selector
+            $('.btnclass').click(function () {
+                alert('Class Selector is called')
+            })
+
+            // Id Selector
+            $('#btnId').click(function () {
+                alert('Id Selector is called')
+            })
+
+        })
+    </script>
+</body>
+</html>
